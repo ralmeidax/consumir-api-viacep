@@ -23,15 +23,18 @@ function loadCEP(){
 async function apiLoadCEP(cep){
     const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`).then((content) => content.json())
     
-    
     console.log(res)
     addCEPInElements(res)
 
 }
 
 function addCEPInElements(item){
-    const { cep, logradouro, complemento, bairro, localidade, uf } = item;
+    const { cep, logradouro, complemento, bairro, localidade, uf, erro} = item;
 
+    if(erro){
+        txtLogradouro.value = '#CEP não encontrado!'
+        return 
+    }
     txtCEP.value = cep;
     txtLogradouro.value = logradouro;
     txtComplemento.value = complemento;
