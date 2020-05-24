@@ -1,0 +1,20 @@
+{
+  "name": "consumir-api-viacep",
+  "version": "1.0.0",
+  "description": "# site: https://viacep.com.br/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralmeidax/consumir-api-viacep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralmeidax/consumir-api-viacep/issues"
+  },
+  "homepage": "https://github.com/ralmeidax/consumir-api-viacep#readme"
+}
