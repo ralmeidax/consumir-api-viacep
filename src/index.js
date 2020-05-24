@@ -5,13 +5,16 @@ const txtBairro = document.querySelector('input#txtBairro');
 const txtLocalidade = document.querySelector('input#txtLocalidade');
 const txtUF = document.querySelector('input#txtUF');
 
-
 txtCEP.addEventListener('blur', loadCEP);
 
 function loadCEP(){
     let cepNumber = txtCEP.value;
 
     eraseCEPElements();
+
+    if(!/^(\d{5}-\d{3})$|^(\d{8})$/i.test(cepNumber))
+        return alert('CEP Inválido!')
+
 
     if(!validateCEP(cepNumber))
         return alert('Preencha o CEP')
