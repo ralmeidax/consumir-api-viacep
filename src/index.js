@@ -50,7 +50,7 @@ function eraseCEPElements(){
     const el = document.querySelectorAll('input.resCEP');
 
     el.forEach(element => {
-        element.value = '';
+        element.value = null;
     });
 }
 
